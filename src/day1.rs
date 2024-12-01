@@ -33,6 +33,7 @@ pub fn part2(left: &[i64], right: &[i64]) -> i64 {
         *hmap.entry(item).or_insert(0_i64) += 1;
         hmap
     });
+
     left.iter()
         .map(|val| right_map.get(val).unwrap_or(&0) * val)
         .sum()
